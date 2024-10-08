@@ -42,16 +42,18 @@ ApplicationWindow {
         SilicaFlickable {
             anchors { fill: parent; horizontalCenter: parent.horizontalCenter; }
             PageHeader { id: header; title: Qt.application.name; description: Qt.application.organization + "/" + Qt.application.name }
+            contentHeight: view.height + button.height + label.height
 
             ColumnView { id: view
                 anchors { top: header.bottom; horizontalCenter: parent.horizontalCenter; }
                 width: parent.width
-                itemHeight: Theme.itemSizeSmall
+                itemHeight: Theme.itemSizeMedium
                 model: pathsModel
 
-                delegate: Component { DetailItem {
+                delegate: Component { ValueButton {
                     width: parent.width
                     label: name; value: path
+                    onClicked: pageStack.push(dirpage, { "path": path, "description": path })
                 }}
             }
             Button{ id: button
