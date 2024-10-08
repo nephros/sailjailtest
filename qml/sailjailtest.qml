@@ -9,32 +9,32 @@ ApplicationWindow {
     initialPage: Component { Page { id: page
         ListModel { id: pathsModel
             Component.onCompleted: {
-                append( { "name": "Application",   "path": Qt.application.name });
-                append( { "name": "Organization",  "path": Qt.application.organization });
+                //append( { "name": "Application",   "path": Qt.application.name });
+                //append( { "name": "Organization",  "path": Qt.application.organization });
+                append( { "name": "Temporary",     "path": StandardPaths.temporary.toString()});
                 append( { "name": "Cache",         "path": StandardPaths.cache.toString()});
+                append( { "name": "GenericData",   "path": StandardPaths.genericData.toString()});
                 append( { "name": "Data",          "path": StandardPaths.data.toString()});
+                append( { "name": "Home",          "path": StandardPaths.home.toString()});
                 append( { "name": "Documents",     "path": StandardPaths.documents.toString()});
                 append( { "name": "Download",      "path": StandardPaths.download.toString()});
-                append( { "name": "GenericData",   "path": StandardPaths.genericData.toString()});
-                append( { "name": "Home",          "path": StandardPaths.home.toString()});
                 append( { "name": "Music",         "path": StandardPaths.music.toString()});
                 append( { "name": "Pictures",      "path": StandardPaths.pictures.toString()});
-                append( { "name": "Temporary",     "path": StandardPaths.temporary.toString()});
                 append( { "name": "Videos",        "path": StandardPaths.videos.toString()});
             }
             function reload() {
                 clear();
-                append( { "name": "Application",   "path": Qt.application.name });
-                append( { "name": "Organization",  "path": Qt.application.organization });
+                //append( { "name": "Application",   "path": Qt.application.name });
+                //append( { "name": "Organization",  "path": Qt.application.organization });
+                append( { "name": "Temporary",     "path": StandardPaths.temporary.toString()});
                 append( { "name": "Cache",         "path": StandardPaths.cache.toString()});
+                append( { "name": "GenericData",   "path": StandardPaths.genericData.toString()});
                 append( { "name": "Data",          "path": StandardPaths.data.toString()});
+                append( { "name": "Home",          "path": StandardPaths.home.toString()});
                 append( { "name": "Documents",     "path": StandardPaths.documents.toString()});
                 append( { "name": "Download",      "path": StandardPaths.download.toString()});
-                append( { "name": "GenericData",   "path": StandardPaths.genericData.toString()});
-                append( { "name": "Home",          "path": StandardPaths.home.toString()});
                 append( { "name": "Music",         "path": StandardPaths.music.toString()});
                 append( { "name": "Pictures",      "path": StandardPaths.pictures.toString()});
-                append( { "name": "Temporary",     "path": StandardPaths.temporary.toString()});
                 append( { "name": "Videos",        "path": StandardPaths.videos.toString()});
             }
         }
