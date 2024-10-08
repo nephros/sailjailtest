@@ -1,5 +1,6 @@
 import QtQuick 2.6
 import Sailfish.Silica 1.0
+import Sailfish.FileManager 1.0
 import QtQuick.LocalStorage 2.0
 
 ApplicationWindow {
@@ -82,6 +83,10 @@ ApplicationWindow {
             }
         );
         console.info("LocalStorage DB info: " + JSON.stringify(db, null, 4));
+    }
+
+    Component { id: dirpage
+        DirectoryPage {}
     }
 }
 
