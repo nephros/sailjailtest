@@ -5,7 +5,7 @@ import QtQuick.LocalStorage 2.0
 ApplicationWindow {
     id: app
 
-    cover:  CoverPlaceholder { text: Qt.application.name }
+    cover:  Component { CoverPlaceholder { text: Qt.application.name } }
     initialPage: Component { Page { id: page
         ListModel { id: pathsModel
             Component.onCompleted: {
